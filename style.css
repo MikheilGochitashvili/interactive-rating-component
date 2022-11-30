@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+
+}
+
+body
+{
+    height: 100vh;
+    background: black;
+}
+
+:root
+{
+    --Orange: rgb(251, 116, 19);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+.container
+{
+    position: relative;
+    width: 359px;
+    padding: 26px;
+    border-radius: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at top,  hsl(213, 19%, 21%) , hsl(214, 15%, 9%));
+    display: block;
+}
+
+.spinner_container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star_container
+{
+    padding: 15px;
+    background: var(--Very-Dark-Blue);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.content_header
+{
+    margin-top: 30px;
+    color: var(--White);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.content
+{
+    margin-top: 12px;
+    color: var(--Medium-Grey);
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.checkbox_label
+{
+    height: 51px;
+    width: 51px;
+    background: var(--Dark-Blue);
+    color: var(--Light-Grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.checkbox_input
+{
+    display: none;
+}
+
+.checkbox_label:hover
+{
+    background: var(--Medium-Grey);
+    color: var(--White);
+}
+
+.checkbox_container
+{
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.submit_container
+{
+    width: 100%;
+    margin-top: 25px;
+}
+.submit_btn
+{
+    width: 100%;
+    border-radius: 27px;
+    background: var(--Orange);
+    color: var(--White);
+    padding: 17px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 300ms;
+    letter-spacing: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.submit_btn:hover
+{
+    background: var(--White);
+    color: var(--Orange);
+}
+
+.container_after
+{
+    position: relative;
+    width: 359px;
+    height: 392px;
+    padding: 35px 26px;
+    border-radius: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at top, hsl(213, 19%, 21%) , hsl(214, 15%, 9%));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.selected_container
+{
+    margin-top: 25px;
+    background: var(--Dark-Blue);
+    padding: 7px 25px;
+    border-radius: 17px;
+    font-weight: 300;
+}
+
+.selected_container span
+{
+    color: rgb(184, 129, 27);
+}
+
+.after_thankyou
+{
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.after_thankyou .after_header
+{
+    color: var(--White);
+    font-size: 26px;
+}
+
+.after_thankyou .after_main
+{
+    text-align: center;
+    color: var(--Light-Grey);
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.selected
+{
+    transition: 300ms;
+    background: var(--Orange);
+    color: var(--White);
+}
+
+.spinner {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 7.5px solid #fb7413;
+    animation: spinner-bulqg1 0.8s infinite linear alternate,
+         spinner-oaa3wk 1.6s infinite linear;
+ }
+ 
+ @keyframes spinner-bulqg1 {
+    0% {
+       clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+ 
+    12.5% {
+       clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    }
+ 
+    25% {
+       clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+    }
+ 
+    50% {
+       clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+ 
+    62.5% {
+       clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+ 
+    75% {
+       clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+    }
+ 
+    100% {
+       clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+    }
+ }
+ 
+ @keyframes spinner-oaa3wk {
+    0% {
+       transform: scaleY(1) rotate(0deg);
+    }
+ 
+    49.99% {
+       transform: scaleY(1) rotate(135deg);
+    }
+ 
+    50% {
+       transform: scaleY(-1) rotate(0deg);
+    }
+ 
+    100% {
+       transform: scaleY(-1) rotate(-135deg);
+    }
+ }
